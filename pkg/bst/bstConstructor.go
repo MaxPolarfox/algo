@@ -71,7 +71,8 @@ func (tree *BST) removeHelper(value int, parent *BST) {
 					tree.Left = tree.Right.Left
 					tree.Right = tree.Right.Right
 				}
-			} else {} // single-node tree
+			} else {
+			} // single-node tree
 		} else if parent.Left == tree { // Left node, Not root
 			if tree.Left != nil {
 				parent.Left = tree.Left

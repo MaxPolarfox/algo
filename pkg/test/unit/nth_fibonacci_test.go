@@ -1,18 +1,18 @@
 package unit
 
 import (
-"encoding/json"
-"fmt"
-"io/ioutil"
-"path/filepath"
-"testing"
+	"encoding/json"
+	"fmt"
+	"io/ioutil"
+	"path/filepath"
+	"testing"
 
-"github.com/algos/pkg/recursion"
-. "github.com/smartystreets/goconvey/convey"
+	"github.com/algos/pkg/recursion"
+	. "github.com/smartystreets/goconvey/convey"
 )
 
 type nthFibonacciTestCase struct {
-	Input int `json:"input"`
+	Input    int `json:"input"`
 	Expected int `json:"expected"`
 }
 

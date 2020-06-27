@@ -12,8 +12,8 @@ import (
 )
 
 type productSumTestCase struct {
-	Input []interface{} `json:"input"` // Since input type []interface{} the unmarshalled int type is float64
-	Expected int `json:"expected"`
+	Input    []interface{} `json:"input"` // Since input type []interface{} the unmarshalled int type is float64
+	Expected int           `json:"expected"`
 }
 
 func TestProductSum(t *testing.T) {

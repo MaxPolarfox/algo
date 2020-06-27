@@ -12,12 +12,12 @@ func LongestPeak(arr []int) int {
 		}
 
 		left := i - 2
-		for left >= 0 && arr[left] < arr[left + 1] {
+		for left >= 0 && arr[left] < arr[left+1] {
 			left--
 		}
 
 		right := i + 2
-		for right < len(arr) && arr[right] < arr[right - 1] {
+		for right < len(arr) && arr[right] < arr[right-1] {
 			right++
 		}
 

@@ -7,7 +7,7 @@ import (
 
 func FindThreeLargestNumbers(arr []int) []int {
 	// Write your code here.
-	larg := []int{math.MinInt32,math.MinInt32,math.MinInt32}
+	larg := []int{math.MinInt32, math.MinInt32, math.MinInt32}
 	for _, num := range arr {
 		if num > larg[2] {
 			shiftAndUpdate(larg, num, 2)
@@ -22,7 +22,7 @@ func FindThreeLargestNumbers(arr []int) []int {
 	return larg
 }
 
-func shiftAndUpdate (arr []int, num int, idx int) {
+func shiftAndUpdate(arr []int, num int, idx int) {
 	for i := 0; i <= idx; i++ {
 		fmt.Printf("in %v, %v, %v\n", arr, num, idx)
 		if i == idx {

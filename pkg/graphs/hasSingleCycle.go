@@ -18,7 +18,7 @@ func jumpToNext(arr []int, i int) int {
 
 	next := (i + num) % len(arr)
 	if next >= 0 {
-		return  next
+		return next
 	}
 	return next + len(arr)
 }

@@ -6,13 +6,15 @@ func KadanesAlgorithm(arr []int) int {
 
 	for i := 1; i < len(arr); i++ {
 		num := arr[i]
-		maxEndingHere = max(num, maxEndingHere + num)
+		maxEndingHere = max(num, maxEndingHere+num)
 		maxSoFar = max(maxEndingHere, maxSoFar)
 	}
 	return maxSoFar
 }
 
-func max(a,b int) int {
-	if a > b {return a}
+func max(a, b int) int {
+	if a > b {
+		return a
+	}
 	return b
 }

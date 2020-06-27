@@ -30,7 +30,7 @@ func spiralFill(arr [][]int, startRow, endRow, startCol, endCol int, result *[]i
 	}
 
 	// left
-	for row := endRow - 1; row >= startRow + 1; row-- {
+	for row := endRow - 1; row >= startRow+1; row-- {
 		if startCol == endCol {
 			break
 		}

@@ -12,7 +12,7 @@ func MinNumberOfCoinsForChange(n int, denoms []int) int {
 	for _, denom := range denoms {
 		for amount := range numOfCoins {
 			if denom <= amount {
-				curr := numOfCoins[amount - denom] + 1
+				curr := numOfCoins[amount-denom] + 1
 				if curr < numOfCoins[amount] {
 					numOfCoins[amount] = curr
 				}

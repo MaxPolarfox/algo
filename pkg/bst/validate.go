@@ -11,7 +11,11 @@ func (tree *BST) validateHelper(min, max int) bool {
 		return false
 	}
 
-	if tree.Left != nil && !tree.Left.validateHelper(min, tree.Value) {return false}
-	if tree.Right != nil && !tree.Right.validateHelper(tree.Value, max) {return false}
+	if tree.Left != nil && !tree.Left.validateHelper(min, tree.Value) {
+		return false
+	}
+	if tree.Right != nil && !tree.Right.validateHelper(tree.Value, max) {
+		return false
+	}
 	return true
 }

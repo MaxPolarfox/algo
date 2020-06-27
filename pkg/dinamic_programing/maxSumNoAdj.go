@@ -8,7 +8,7 @@ func MaxSubsetSumNoAdjacent(arr []int) int {
 	}
 	second, first := arr[0], max(arr[0], arr[1])
 
-	for i:=2; i<len(arr); i++ {
+	for i := 2; i < len(arr); i++ {
 		current := max(first, second+arr[i])
 		second = first
 		first = current
@@ -16,7 +16,9 @@ func MaxSubsetSumNoAdjacent(arr []int) int {
 	return first
 }
 
-func max(a,b int) int {
-	if a > b { return a}
+func max(a, b int) int {
+	if a > b {
+		return a
+	}
 	return b
 }

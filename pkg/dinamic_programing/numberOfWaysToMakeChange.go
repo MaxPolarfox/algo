@@ -6,7 +6,7 @@ func NumberOfWaysToMakeChange(n int, denoms []int) int {
 	for _, denom := range denoms {
 		for amount := 1; amount < n+1; amount++ {
 			if denom <= amount {
-				ways[amount] += ways[amount - denom]
+				ways[amount] += ways[amount-denom]
 			}
 		}
 	}

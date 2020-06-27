@@ -22,7 +22,9 @@ func (tree *BST) FindClosestValueHelper(target, closest int) int {
 	return closest
 }
 
-func absDiff(a,b int) int {
-	if a < b { return b-a}
+func absDiff(a, b int) int {
+	if a < b {
+		return b - a
+	}
 	return a - b
 }
