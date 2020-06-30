@@ -3,11 +3,11 @@ package unit
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/Personal/algo/pkg/recursion"
 	"io/ioutil"
 	"path/filepath"
 	"testing"
 
-	"github.com/algos/pkg/recursion"
 	. "github.com/smartystreets/goconvey/convey"
 )
 
