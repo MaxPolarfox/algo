@@ -1,4 +1,4 @@
-module github.com/Personal/algo
+module github.com/algos/GO_algos
 
 go 1.13
 

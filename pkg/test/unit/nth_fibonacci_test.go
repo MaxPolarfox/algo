@@ -3,7 +3,7 @@ package unit
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/Personal/algo/pkg/recursion"
+	"github.com/algos/GO_algos/pkg/recursion"
 	"io/ioutil"
 	"path/filepath"
 	"testing"

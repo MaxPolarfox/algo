@@ -3,8 +3,8 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/Personal/algo/pkg/recursion"
-	"github.com/Personal/algo/pkg/arrays"
+	"github.com/algos/GO_algos/pkg/arrays"
+	"github.com/algos/GO_algos/pkg/recursion"
 	"strconv"
 )
 
@@ -27,6 +27,14 @@ func main() {
 			arr = append(arr, valInt)
 		}
 		result := arrays.LongestPeak(arr)
+		fmt.Printf("Result: %v", result)
+	case "permutations":
+		arr := []int{}
+		for _, val := range arguments {
+			valInt, _ := strconv.Atoi(val)
+			arr = append(arr, valInt)
+		}
+		result := recursion.GetPermutations(arr)
 		fmt.Printf("Result: %v", result)
 	}
 }
