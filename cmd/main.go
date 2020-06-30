@@ -3,8 +3,8 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/algo/pkg/arrays"
-	"github.com/algo/pkg/recursion"
+	"github.com/Personal/algo/pkg/recursion"
+	"github.com/Personal/algo/pkg/arrays"
 	"strconv"
 )
 
