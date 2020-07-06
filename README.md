@@ -1,5 +1,5 @@
 # GO_algos
->Calculate algorithms throw your terminal
+>Calculate algorithms right in your terminal
 
 GO-algos is a program that calculates famous algorithms with passed user's inputs and returns calculated results all in your terminal.
 
