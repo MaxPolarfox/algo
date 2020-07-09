@@ -4,6 +4,7 @@ import (
 	"flag"
 	"fmt"
 	"github.com/algos/GO_algos/pkg/arrays"
+	"github.com/algos/GO_algos/pkg/dinamic_programing"
 	"github.com/algos/GO_algos/pkg/recursion"
 	"strconv"
 )
@@ -35,6 +36,14 @@ func main() {
 			arr = append(arr, valInt)
 		}
 		result := recursion.GetPermutations(arr)
+		fmt.Printf("Result: %v", result)
+	case "water_area":
+		arr := []int{}
+		for _, val := range arguments {
+			valInt, _ := strconv.Atoi(val)
+			arr = append(arr, valInt)
+		}
+		result := dinamic_programing.WaterArea(arr)
 		fmt.Printf("Result: %v", result)
 	}
 }
