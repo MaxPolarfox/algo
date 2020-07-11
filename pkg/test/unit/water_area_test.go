@@ -3,7 +3,7 @@ package unit
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/algos/GO_algos/pkg/dinamic_programing"
+	"github.com/GO_algos/pkg/dinamic_programing"
 	"io/ioutil"
 	"path/filepath"
 	"testing"
