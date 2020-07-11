@@ -22,9 +22,9 @@ type reverseLinkedTestData struct {
 }
 
 type testNode struct {
-	ID string `json:"id"`
-	Next *string `json:"next"`
-	Value int `json:"value"`
+	ID		string	`json:"id"`
+	Next	*string `json:"next"`
+	Value	int		`json:"value"`
 }
 
 

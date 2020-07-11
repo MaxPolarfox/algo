@@ -15,7 +15,3 @@ func BubbleSort(arr []int) []int {
 	}
 	return arr
 }
-
-func swap(arr []int, i, j int) {
-	arr[i], arr[j] = arr[j], arr[i]
-}
