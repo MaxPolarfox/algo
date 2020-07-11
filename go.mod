@@ -1,4 +1,4 @@
-module github.com/algos/GO_algos
+module github.com/GO_algos
 
 go 1.13
 

@@ -1,0 +1,75 @@
+[
+  {
+    "string": "babc",
+    "classMethodsToCall": [{"arguments": ["abc"], "method": "contains", "output":  true}]
+  },
+  {
+    "string": "test",
+    "classMethodsToCall": [
+      {"arguments": ["t"], "method": "contains", "output":  true},
+      {"arguments": ["st"], "method": "contains", "output":  true},
+      {"arguments": ["est"], "method": "contains", "output":  true},
+      {"arguments": ["test"], "method": "contains", "output":  true},
+      {"arguments": ["tes"], "method": "contains", "output":  false}
+    ]
+  },
+  {
+    "string": "invisible",
+    "classMethodsToCall": [
+      {"arguments": ["e"], "method": "contains", "output": true},
+      {"arguments": ["le"], "method": "contains", "output": true},
+      {"arguments": ["ble"], "method": "contains", "output": true},
+      {"arguments": ["ible"], "method": "contains", "output": true},
+      {"arguments": ["sible"], "method": "contains", "output": true},
+      {"arguments": ["isible"], "method": "contains", "output": true},
+      {"arguments": ["visible"], "method": "contains", "output": true},
+      {"arguments": ["nvisible"], "method": "contains", "output": true},
+      {"arguments": ["invisible"], "method": "contains", "output": true},
+      {"arguments": ["nvisibl"], "method": "contains", "output": false}
+    ]
+  },
+  {
+    "string": "1234556789",
+    "classMethodsToCall": [
+      {"arguments": ["9"], "method": "contains", "output": true},
+      {"arguments": ["89"], "method": "contains", "output": true},
+      {"arguments": ["789"], "method": "contains", "output": true},
+      {"arguments": ["6789"], "method": "contains", "output": true},
+      {"arguments": ["56789"], "method": "contains", "output": true},
+      {"arguments": ["456789"], "method": "contains", "output": false},
+      {"arguments": ["3456789"], "method": "contains", "output": false},
+      {"arguments": ["23456789"], "method": "contains", "output": false},
+      {"arguments": ["123456789"], "method": "contains", "output": false},
+      {"arguments": ["45567"], "method": "contains", "output": false}
+    ]
+  },
+  {
+    "string": "testtest",
+    "classMethodsToCall": [
+      {"arguments": ["t"], "method": "contains","output": true},
+      {"arguments": ["st"], "method": "contains","output": true},
+      {"arguments": ["est"], "method": "contains","output": true},
+      {"arguments": ["test"], "method": "contains","output": true},
+      {"arguments": ["ttest"], "method": "contains","output": true},
+      {"arguments": ["sttest"], "method": "contains","output": true},
+      {"arguments": ["esttest"], "method": "contains","output": true},
+      {"arguments": ["testtest"], "method": "contains","output": true},
+      {"arguments": ["tt"], "method": "contains", "output": false}
+    ]
+  },
+  {
+    "string": "ttttttttt",
+    "classMethodsToCall": [
+      {"arguments": ["t"], "method": "contains","output": true},
+      {"arguments": ["tt"], "method": "contains","output": true},
+      {"arguments": ["ttt"], "method": "contains","output": true},
+      {"arguments": ["tttt"], "method": "contains","output": true},
+      {"arguments": ["ttttt"], "method": "contains","output": true},
+      {"arguments": ["tttttt"], "method": "contains","output": true},
+      {"arguments": ["ttttttt"], "method": "contains","output": true},
+      {"arguments": ["tttttttt"], "method": "contains","output": true},
+      {"arguments": ["ttttttttt"], "method": "contains","output": true},
+      {"arguments": ["vvv"], "method": "contains", "output": false}
+    ]
+  }
+]

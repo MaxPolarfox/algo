@@ -3,8 +3,8 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/algos/GO_algos/pkg/arrays"
-	"github.com/algos/GO_algos/pkg/recursion"
+	"github.com/GO_algos/pkg/arrays"
+	"github.com/GO_algos/pkg/recursion"
 	"strconv"
 )
 
