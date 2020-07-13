@@ -2,6 +2,11 @@ package arrays
 
 import "math"
 
+//Subarray Sort Write a function that takes in an array of at least two integers and that returns an array of the starting and ending indices of the smallest subarray in the input array that needs to be sorted in place in order for the entire input array to 7, 7, 7, be sorted (in ascending order). If the input array is already sorted, the function should return [-1, -1]
+//Sample Input array
+//Sample Output 10, 11 12, 16, 18, -1] 19]
+
+// Time: O(n)  Space: O(1)
 func SubarraySort(arr []int) []int {
 	minOutOfOrder, maxOutOfOrder := math.MaxInt32, math.MinInt32
 
