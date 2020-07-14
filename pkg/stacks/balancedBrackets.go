@@ -8,11 +8,11 @@ var opening = map[rune]bool{
 var closing = map[rune]bool{
 	'}': true,
 	']': true,
-	')': true,}
+	')': true}
 var matching = map[rune]rune{
 	'}': '{',
 	']': '[',
-	')': '(',}
+	')': '('}
 
 func BalancedBrackets(s string) bool {
 	stack := []rune{}
@@ -25,8 +25,8 @@ func BalancedBrackets(s string) bool {
 			if len(stack) == 0 {
 				return false
 			}
-			if matching[char] == stack[len(stack) - 1] {
-				stack = stack[0:len(stack)-1]
+			if matching[char] == stack[len(stack)-1] {
+				stack = stack[0 : len(stack)-1]
 			} else {
 				return false
 			}

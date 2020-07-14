@@ -12,7 +12,7 @@ func NewMinHeap(array []int) *MinHeap {
 func (h *MinHeap) BuildHeap(arr []int) {
 	parentNode := (len(arr) - 2) / 2
 	for currentIdx := parentNode + 1; currentIdx >= 0; currentIdx-- {
-		h.siftDown(currentIdx, len(arr) - 1)
+		h.siftDown(currentIdx, len(arr)-1)
 	}
 }
 
@@ -21,7 +21,7 @@ func (h *MinHeap) siftDown(currentIdx, endIndex int) {
 	for childOneIdx <= endIndex {
 		childTwoIdx := -1
 		if currentIdx*2+2 <= endIndex {
-			childTwoIdx = currentIdx*2+2
+			childTwoIdx = currentIdx*2 + 2
 		}
 		idxToSwap := childOneIdx
 		if childTwoIdx > -1 && (*h)[childTwoIdx] < (*h)[childOneIdx] {
@@ -60,7 +60,7 @@ func (h *MinHeap) Remove() int {
 	l := len(*h)
 	h.swap(0, l-1)
 	removed := (*h)[l-1]
-	*h = (*h)[0:l-1]
+	*h = (*h)[0 : l-1]
 	h.siftDown(0, l-2)
 	return removed
 }
@@ -70,6 +70,6 @@ func (h *MinHeap) Insert(value int) {
 	h.siftUp()
 }
 
-func (h MinHeap) swap(i,j int) {
+func (h MinHeap) swap(i, j int) {
 	h[i], h[j] = h[j], h[i]
 }

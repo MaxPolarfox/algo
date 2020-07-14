@@ -3,12 +3,12 @@ package strings
 func LongestPalindromicSubstring(str string) string {
 	longest := ""
 
-	for i:=0; i< len(str); i++ {
+	for i := 0; i < len(str); i++ {
 		current := string(str[i])
-		l := i-1
-		r := i+1
+		l := i - 1
+		r := i + 1
 
-		for r < len(str) && str[i] == str[r]  {
+		for r < len(str) && str[i] == str[r] {
 			current += string(str[r])
 			r++
 		}

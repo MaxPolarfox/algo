@@ -12,8 +12,8 @@ import (
 )
 
 type waterAreaTestCase struct {
-	Heights   []int 	`json:"heights"`
-	Output 		int     `json:"output"`
+	Heights []int `json:"heights"`
+	Output  int   `json:"output"`
 }
 
 func TestWaterArea(t *testing.T) {

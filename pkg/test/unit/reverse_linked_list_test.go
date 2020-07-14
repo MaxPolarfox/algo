@@ -12,21 +12,20 @@ import (
 )
 
 type reverseLinkedListTestCase struct {
-	Input    reverseLinkedTestData `json:"input"`
+	Input  reverseLinkedTestData `json:"input"`
 	Output reverseLinkedTestData `json:"output"`
 }
 
 type reverseLinkedTestData struct {
-	Head string `json:"head"`
+	Head  string     `json:"head"`
 	Nodes []testNode `json:"nodes"`
 }
 
 type testNode struct {
-	ID		string	`json:"id"`
-	Next	*string `json:"next"`
-	Value	int		`json:"value"`
+	ID    string  `json:"id"`
+	Next  *string `json:"next"`
+	Value int     `json:"value"`
 }
-
 
 func TestReverseLinkedList(t *testing.T) {
 	Convey("TestReverseLinkedList", t, func(c C) {
@@ -56,7 +55,7 @@ func TestReverseLinkedList(t *testing.T) {
 	})
 }
 
-func BuildLinkedList (startID string, nodes []testNode) *linked_lists.LinkedList {
+func BuildLinkedList(startID string, nodes []testNode) *linked_lists.LinkedList {
 	var head *linked_lists.LinkedList
 	var nextID *string
 

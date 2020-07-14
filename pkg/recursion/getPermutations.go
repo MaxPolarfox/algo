@@ -7,7 +7,7 @@ func GetPermutations(arr []int) [][]int {
 }
 
 func getPermutationsHelper(arr []int, perm []int, perms *[][]int) {
-	if len(arr) == 0 &&  len(perm) != 0 {
+	if len(arr) == 0 && len(perm) != 0 {
 		*perms = append(*perms, perm)
 		return
 	}

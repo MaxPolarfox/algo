@@ -13,8 +13,8 @@ import (
 )
 
 type subarraySortTestCase struct {
-	Input	[]int	`json:"input"`
-	Output	[]int   `json:"output"`
+	Input  []int `json:"input"`
+	Output []int `json:"output"`
 }
 
 func TestSubarraySort(t *testing.T) {

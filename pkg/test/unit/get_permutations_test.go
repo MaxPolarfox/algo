@@ -13,7 +13,7 @@ import (
 )
 
 type getPermutationsTestCase struct {
-	Input    []int `json:"input"`
+	Input    []int   `json:"input"`
 	Expected [][]int `json:"expected"`
 }
 

@@ -12,15 +12,15 @@ import (
 	"github.com/GO_algos/pkg/tries"
 )
 
-type testCaseSuffixTrie struct{
-	String string `json:"string"`
+type testCaseSuffixTrie struct {
+	String             string                           `json:"string"`
 	ClassMethodsToCall []methodToCallSuffixTreeTestCase `json:"classMethodsToCall"`
 }
 
 type methodToCallSuffixTreeTestCase struct {
 	Arguments []string `json:"arguments"`
-	Method string `json:"method"`
-	Output bool `json:"output"`
+	Method    string   `json:"method"`
+	Output    bool     `json:"output"`
 }
 
 func TestSuffixTrie(t *testing.T) {
@@ -42,7 +42,6 @@ func TestSuffixTrie(t *testing.T) {
 				trie := tries.NewSuffixTrie()
 				trie.PopulateSuffixTrieFrom(testCase.String)
 
-
 				for _, method := range testCase.ClassMethodsToCall {
 					if method.Method == "contains" {
 						output := trie.Contains(method.Arguments[0])
@@ -53,4 +52,3 @@ func TestSuffixTrie(t *testing.T) {
 		}
 	})
 }
-

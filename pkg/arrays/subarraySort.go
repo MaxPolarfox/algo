@@ -18,26 +18,25 @@ func SubarraySort(arr []int) []int {
 	}
 
 	if minOutOfOrder == math.MaxInt32 {
-		return []int{-1,-1}
+		return []int{-1, -1}
 	}
 	subArrLeft := 0
-	for minOutOfOrder >=  arr[subArrLeft] {
+	for minOutOfOrder >= arr[subArrLeft] {
 		subArrLeft++
 	}
 
-	subArrRight := len(arr)-1
-	for maxOutOfOrder <=  arr[subArrRight] {
+	subArrRight := len(arr) - 1
+	for maxOutOfOrder <= arr[subArrRight] {
 		subArrRight--
 	}
 	return []int{subArrLeft, subArrRight}
 }
 
-
 func isOutOfOrder(i int, num int, arr []int) bool {
 	if i == 0 {
 		return num > arr[i+1]
 	}
-	if i == len(arr) - 1 {
+	if i == len(arr)-1 {
 		return num < arr[i-1]
 	}
 	return num > arr[i+1] || num < arr[i-1]

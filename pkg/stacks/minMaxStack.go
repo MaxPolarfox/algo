@@ -1,7 +1,7 @@
 package stacks
 
 type MinMaxStack struct {
-	stack []int
+	stack       []int
 	minMaxStack []entry
 }
 
@@ -28,7 +28,7 @@ func (stack *MinMaxStack) Pop() int {
 func (stack *MinMaxStack) Push(number int) {
 	newMinMax := entry{min: number, max: number}
 	if len(stack.minMaxStack) > 0 {
-		oldMinMax := stack.minMaxStack[len(stack.minMaxStack) -1]
+		oldMinMax := stack.minMaxStack[len(stack.minMaxStack)-1]
 		newMinMax.min = min(oldMinMax.min, number)
 		newMinMax.max = max(oldMinMax.max, number)
 	}
@@ -37,22 +37,21 @@ func (stack *MinMaxStack) Push(number int) {
 }
 
 func (stack *MinMaxStack) GetMin() int {
-	return stack.minMaxStack[len(stack.minMaxStack) - 1].min
+	return stack.minMaxStack[len(stack.minMaxStack)-1].min
 }
 
 func (stack *MinMaxStack) GetMax() int {
-	return stack.minMaxStack[len(stack.minMaxStack) - 1].max
+	return stack.minMaxStack[len(stack.minMaxStack)-1].max
 }
 
-
-func min (a,b int) int {
+func min(a, b int) int {
 	if a < b {
 		return a
 	}
 	return b
 }
 
-func max (a,b int) int {
+func max(a, b int) int {
 	if a < b {
 		return b
 	}
