@@ -13,12 +13,12 @@ package arrays
 // Sample Output expected =  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
 
 func ZigzagTraverse(arr [][]int) []int {
-	if len(arr) ==  0 {
+	if len(arr) == 0 {
 		return []int{}
 	}
 
 	col, row := 0, 0
-	height, width := len(arr) - 1, len(arr[0]) - 1
+	height, width := len(arr)-1, len(arr[0])-1
 	result := []int{}
 	goingDown := true
 
@@ -52,7 +52,6 @@ func ZigzagTraverse(arr [][]int) []int {
 	}
 	return result
 }
-
 
 func isOutOfBound(row, col, height, width int) bool {
 	return row < 0 || row > height || col < 0 || col > width

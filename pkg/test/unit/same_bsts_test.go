@@ -12,9 +12,9 @@ import (
 )
 
 type sameBSTsTestCase struct {
-	ArrayOne    []int   `json:"arrayOne"`
-	ArrayTwo    []int   `json:"arrayTwo"`
-	Expected 	bool 	`json:"expected"`
+	ArrayOne []int `json:"arrayOne"`
+	ArrayTwo []int `json:"arrayTwo"`
+	Expected bool  `json:"expected"`
 }
 
 func TestSameBSTs(t *testing.T) {

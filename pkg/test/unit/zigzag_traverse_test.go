@@ -12,8 +12,8 @@ import (
 )
 
 type zigzagTraverseTestCase struct {
-	Input    [][]int	`json:"input"`
-	Expected []int 		`json:"expected"`
+	Input    [][]int `json:"input"`
+	Expected []int   `json:"expected"`
 }
 
 func TestZigzagTraverse(t *testing.T) {
@@ -37,5 +37,3 @@ func TestZigzagTraverse(t *testing.T) {
 		}
 	})
 }
-
-

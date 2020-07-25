@@ -1,6 +1,5 @@
 package bst
 
-
 // An array of integers is said to represent the Binary Search Tree (BST) obtained by inserting each integer in the array,
 // from left to right, into the BST. Write a function that takes in two arrays of integers and determines whether these arrays represent the same BST.
 // Note that you're not allowed to construct any BSTs in your code. A BST is a Binary Tree that consists only of BST nodes.
@@ -15,7 +14,7 @@ package bst
 // Time O(n^2) Space O(n^2)
 
 func SameBSTs(arrOne, arrTwo []int) bool {
-	if  len(arrOne) != len(arrTwo) {
+	if len(arrOne) != len(arrTwo) {
 		return false
 	}
 
@@ -37,7 +36,7 @@ func SameBSTs(arrOne, arrTwo []int) bool {
 
 func getSmaller(arr []int) []int {
 	smaller := []int{}
-	for i :=1; i < len(arr); i++ {
+	for i := 1; i < len(arr); i++ {
 		if arr[i] < arr[0] {
 			smaller = append(smaller, arr[i])
 		}
@@ -47,7 +46,7 @@ func getSmaller(arr []int) []int {
 
 func getBiggerOrEqual(arr []int) []int {
 	biggetOrEqual := []int{}
-	for i :=1; i < len(arr); i++ {
+	for i := 1; i < len(arr); i++ {
 		if arr[i] >= arr[0] {
 			biggetOrEqual = append(biggetOrEqual, arr[i])
 		}
