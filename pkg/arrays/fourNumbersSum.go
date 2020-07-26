@@ -1,5 +1,6 @@
 package arrays
 
+// Time: O(n^3) Space: O(n^2)
 func FourNumberSum(arr []int, target int) [][]int {
 	memo := map[int][][]int{}
 	quadruplets := [][]int{}
