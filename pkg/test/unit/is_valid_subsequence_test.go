@@ -1,4 +1,4 @@
-package arrays
+package unit
 
 import (
 	"encoding/json"
@@ -11,21 +11,17 @@ import (
 	. "github.com/smartystreets/goconvey/convey"
 )
 
-type isValidSubsequenceTestCase struct {
-	Array    []int `json:"array"`
-	Sequence []int `json:"sequence"`
-	Expected bool `json:"expected"`
-}
+
 
 func TestIsValidSubsequence(t *testing.T) {
 	Convey("Test IsValidSubsequence", t, func(c C) {
-		absPath, err := filepath.Abs("../../test_data/is_valid_subsequence.json")
+		absPath, err := filepath.Abs("../test_data/is_valid_subsequence.json")
 		c.So(err, ShouldBeNil)
 
 		testCasesDataBytes, err := ioutil.ReadFile(absPath)
 		c.So(err, ShouldBeNil)
 
-		testCases := []isValidSubsequenceTestCase{}
+		testCases := []ArraysTestCase{}
 
 		err = json.Unmarshal(testCasesDataBytes, &testCases)
 		c.So(err, ShouldBeNil)
@@ -33,7 +29,7 @@ func TestIsValidSubsequence(t *testing.T) {
 		for i, testCase := range testCases {
 			Convey(fmt.Sprintf("Test %v:", i+1), func(c C) {
 				output := arrays.IsValidSubsequence(testCase.Array, testCase.Sequence)
-				c.So(output, ShouldResemble, testCase.Expected)
+				c.So(output, ShouldResemble, testCase.ExpectedBool)
 			})
 		}
 	})
