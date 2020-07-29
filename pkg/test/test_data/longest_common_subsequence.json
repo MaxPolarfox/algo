@@ -1,0 +1,23 @@
+[
+  {"str1": "ZXVVYZW", "str2": "XKYKZPW", "expected":  ["X", "Y", "Z", "W"]},
+  {"str1": "", "str2": "", "expected":  []},
+  {"str1": "", "str2": "ABCDEFG", "expected":  []},
+  {"str1": "ABCDEFG", "str2": "", "expected":  []},
+  {"str1": "ABCDEFG", "str2": "ABCDEFG", "expected":  ["A", "B", "C", "D", "E", "F", "G"]},
+  {"str1": "ABCDEFG", "str2": "APPLES", "expected":  ["A", "E"]},
+  {"str1": "clement", "str2": "antoine", "expected":  ["n", "t"]},
+  {
+    "str1": "8111111111111111142",
+    "str2": "222222222822222222222222222222433333333332",
+    "expected":  ["8", "4", "2"]},
+  {
+    "str1": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    "str2": "CCCDDEGDHAGKGLWAJWKJAWGKGWJAKLGGWAFWLFFWAGJWKAG",
+    "expected": ["C", "D", "E", "G", "H", "J", "K", "L", "W"]
+  },
+  {
+    "str1": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    "str2": "CCCDDEGDHAGKGLWAJWKJAWGKGWJAKLGGWAFWLFFWAGJWKAGTUV",
+    "expected": ["C", "D", "E", "G", "H", "J", "K", "L", "T", "U", "V"]
+  }
+]
