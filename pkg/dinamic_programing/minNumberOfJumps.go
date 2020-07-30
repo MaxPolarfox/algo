@@ -18,8 +18,8 @@ func MinNumberOfJumps(arr []int) int {
 	maxReach := arr[0]
 	steps := arr[0]
 
-	for i := 1; i < len(arr) -1; i++ {
-		if i + arr[i] > maxReach {
+	for i := 1; i < len(arr)-1; i++ {
+		if i+arr[i] > maxReach {
 			maxReach = i + arr[i]
 		}
 		steps--

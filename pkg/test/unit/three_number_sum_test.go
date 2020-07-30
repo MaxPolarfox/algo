@@ -11,9 +11,9 @@ import (
 	. "github.com/smartystreets/goconvey/convey"
 )
 
-func TestIsMonotonic(t *testing.T) {
-	Convey("Test IsMonotonic", t, func(c C) {
-		absPath, err := filepath.Abs("../test_data/is_monotonic.json")
+func TestThreeNumberSum(t *testing.T) {
+	Convey("Test ThreeNumberSum", t, func(c C) {
+		absPath, err := filepath.Abs("../test_data/three_number_sum.json")
 		c.So(err, ShouldBeNil)
 
 		testCasesDataBytes, err := ioutil.ReadFile(absPath)
@@ -26,8 +26,8 @@ func TestIsMonotonic(t *testing.T) {
 
 		for i, testCase := range testCases {
 			Convey(fmt.Sprintf("Test %v:", i+1), func(c C) {
-				output := arrays.IsMonotonic(testCase.Array)
-				c.So(output, ShouldResemble, testCase.ExpectedBool)
+				output := arrays.ThreeNumberSum(testCase.Array, testCase.TargetSum)
+				c.So(output, ShouldResemble, testCase.ExpectedNestedArrayInt)
 			})
 		}
 	})
