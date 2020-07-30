@@ -1,7 +1,7 @@
 package arrays
 
 func MoveElementToEnd(arr []int, toMove int) []int {
-	i, j := 0, len(arr)-1
+	i,j := 0, len(arr)-1
 
 	for i < j {
 		for i < j && arr[j] == toMove {

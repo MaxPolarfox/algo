@@ -1,8 +1,19 @@
 package dinamic_programing
 
+// Write a function that takes in two strings and returns their longest common subsequence. A subsequence of a string is
+// a set of characters that aren't necessarily adjacent in the string but that are in the same order as they appear in the string.
+// For instance, the characters ["a", "c" , "d"] form a subsequence of the string "absd", and so do the characters ["b", "d"].
+// Note that a single character in a string and the string itself are both valid subsequences of the string.
+// You can assume that there will only be one longest common subsequence.
+
+// Sample Input: strl = "ZXVVYZW" str2 = " XKYKZPW"
+// Sample Output: ["X", "Y", "Z" "W"]
+
+// Time: O(nm) Space: O(nm)
 func LongestCommonSubsequence(s1 string, s2 string) string {
 	lengths := make([][]int, len(s2)+1)
-	for i := range lengths {lengths[i] = make([]int, len(s1)+1)
+	for i := range lengths {
+		lengths[i] = make([]int, len(s1)+1)
 	}
 	for i := 1; i < len(s2)+1; i++ {
 		for j := 1; j < len(s1)+1; j++ {
