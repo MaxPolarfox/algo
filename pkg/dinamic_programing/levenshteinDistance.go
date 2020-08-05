@@ -24,13 +24,3 @@ func LevenshteinDistance(a, b string) int {
 
 	return edits[len(b)][len(a)]
 }
-
-func min(args ...int) int {
-	curr := args[0]
-	for _, num := range args {
-		if curr > num {
-			curr = num
-		}
-	}
-	return curr
-}

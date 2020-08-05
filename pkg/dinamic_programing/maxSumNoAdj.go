@@ -15,10 +15,3 @@ func MaxSubsetSumNoAdjacent(arr []int) int {
 	}
 	return first
 }
-
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
