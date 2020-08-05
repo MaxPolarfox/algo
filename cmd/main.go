@@ -4,6 +4,7 @@ import (
 	"flag"
 	"fmt"
 	"strconv"
+	"strings"
 
 	"github.com/GO_algos/pkg/arrays"
 	"github.com/GO_algos/pkg/dinamic_programing"
@@ -12,9 +13,12 @@ import (
 
 func main() {
 	algoPTR := flag.String("algo", "fibonacci", "algo name")
+
+	valArrayIntPTR := flag.String("valArrayInt", "[]", "value []int")
 	flag.Parse()
 
 	algoName := *algoPTR
+	valArrayIntArgument := *valArrayIntPTR
 	arguments := flag.Args()
 
 	switch algoName {
@@ -46,5 +50,25 @@ func main() {
 		}
 		result := dinamic_programing.WaterArea(arr)
 		fmt.Printf("Result: %v", result)
+	case "is_monotonic":
+		if valArrayIntArgument == "" {
+			panic([]interface{}{`Not enough arguments, please pass -valArrayIntPTR="123456"`})
+		}
+		arrIntInput := StringToArrInt(valArrayIntArgument)
+		result := arrays.IsMonotonic(arrIntInput)
+		fmt.Printf("Result: %v", result)
 	}
+}
+
+func StringToArrInt(s string) []int {
+	result := []int{}
+	arrString := strings.Split(s, "")
+	for i := 0; i < len(arrString); i++ {
+		num, err := strconv.Atoi(arrString[i])
+		if err != nil {
+			panic([]interface{}{"StringToArrInt.strings.Split", "err", err})
+		}
+		result = append(result, num)
+	}
+	return result
 }
